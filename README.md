@@ -29,3 +29,7 @@ This project is under an MIT licence
 ## Engine used
 
 * Unity
+
+## Contributors
+
+* 
