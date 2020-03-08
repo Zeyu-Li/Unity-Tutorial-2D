@@ -48,7 +48,6 @@ public class movement : MonoBehaviour {
         if (Input.GetButton("Jump") && jumping == true) {
             // can jump only once
             if (jumpCheckCounter > 0) {
-                Debug.Log(jumpCheckCounter);
                 rb.velocity = Vector2.up * jumpForce;
                 jumpCheckCounter -= Time.deltaTime;
             }
