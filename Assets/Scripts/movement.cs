@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class movement : MonoBehaviour {
     // inits
     // hoziontal speed
@@ -28,6 +29,11 @@ public class movement : MonoBehaviour {
 
     // inits rigid body
     private Rigidbody2D rb;
+
+    // audio    
+    public AudioSource audioSource;
+    public AudioClip clip;
+    public float volume = 0.2f;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -70,6 +76,14 @@ public class movement : MonoBehaviour {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("gems")) {
+            Destroy(collision.gameObject);
+            audioSource.PlayOneShot(clip, volume);
+        }
+    }
+
     void FixedUpdate() {
         // gets horizontal input from Unity (1 = right, -1 = left)
         moveInput = Input.GetAxisRaw("Horizontal");
