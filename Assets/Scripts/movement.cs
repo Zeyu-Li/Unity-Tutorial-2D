@@ -35,8 +35,12 @@ public class movement : MonoBehaviour {
     public AudioClip clip;
     public float volume = 0.2f;
 
+    // change animation states
+    private Animator animator;
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
@@ -49,6 +53,8 @@ public class movement : MonoBehaviour {
             jumping = true;
             jumpCheckCounter = jumpCheck;
             rb.velocity = Vector2.up * jumpForce;
+
+            animator.SetInteger("AnimValue", 2);
         }
 
         if (Input.GetButton("Jump") && jumping == true) {
@@ -66,6 +72,7 @@ public class movement : MonoBehaviour {
 
         if (Input.GetButtonUp("Jump")) {
             jumping = false;
+            animator.SetInteger("AnimValue", 0);
         }
 
         // flips player
@@ -87,6 +94,16 @@ public class movement : MonoBehaviour {
     void FixedUpdate() {
         // gets horizontal input from Unity (1 = right, -1 = left)
         moveInput = Input.GetAxisRaw("Horizontal");
+
+        // if moving, then idle, else set to moving animation
+        if (animator.GetInteger("AnimValue") == 2) {
+            ;
+        } else if (moveInput != 0) {
+            animator.SetInteger("AnimValue", 1);
+        } else {
+            animator.SetInteger("AnimValue", 0);
+        }
+
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
 }
