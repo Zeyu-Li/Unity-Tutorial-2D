@@ -401,7 +401,8 @@ MonoBehaviour:
   somePlatform: {fileID: 1405320504}
   audioSource: {fileID: 1391704330}
   clip: {fileID: 8300000, guid: 74edb8ce571681b45b5027b8363728fd, type: 3}
-  volume: 0.2
+  volume: 1
+  timeLeft: 8
 --- !u!61 &93999371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1164,11 +1165,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6a8662b7d48dfd94e8902c13fe86046f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1531,7 +1532,7 @@ MonoBehaviour:
     m_Bits: 256
   audioSource: {fileID: 1391704330}
   clip: {fileID: 8300000, guid: 4e058b5be28ed984b80988109312204b, type: 3}
-  volume: 0.2
+  volume: 1
 --- !u!58 &1512717033
 CircleCollider2D:
   m_ObjectHideFlags: 0
