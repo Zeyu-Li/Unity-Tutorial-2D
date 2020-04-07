@@ -6,6 +6,7 @@ TagManager:
   tags:
   - gems
   - button
+  - death
   layers:
   - Default
   - TransparentFX
