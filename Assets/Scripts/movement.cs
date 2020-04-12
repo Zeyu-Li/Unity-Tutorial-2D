@@ -75,6 +75,10 @@ public class movement : MonoBehaviour {
             animator.SetInteger("AnimValue", 0);
         }
 
+        if (Input.GetKey("escape")) {
+            Application.Quit();
+        }
+
         // flips player
         if (moveInput > 0) {
             transform.eulerAngles = new Vector3(0, 0, 0);
