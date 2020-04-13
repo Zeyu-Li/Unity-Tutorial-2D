@@ -76,7 +76,7 @@
 
   Unity is a panel based application. These panels can be rearranged however you like and saved as default. 
 
-  ![layout](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/layout.png)
+  ![layout](images\layout.png)
 
   This is my default setup. The **Scene** panel is the most important viewport. This is where you modify the scene. The **Game** scene only turns on if you hit play. It is a preview of what the user will see if you build the current scene.
 
@@ -112,7 +112,7 @@
 
   However, before we get to that, let us take a look at the Sprite setting
 
-  ![sprites](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/sprites.png)
+  ![sprites](images\sprites.png)
 
   From the top header, we can see some info on the item
 
@@ -134,7 +134,7 @@
 
   2. Click **Spirit Editor** button
 
-     ![spriteEditor](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/spriteEditor.png)
+     ![spriteEditor](images\spriteEditor.png)
 
   3. In sprite editor, click Slice -> Slice (This is an automatic slicer and is usually good enough, if not, manually move the transform bound boxes to fit or define split at distance apart (must change to **Grid by Size Count**, not **Automatic**) with the size of tile in **Pixel Size**.
 
@@ -157,7 +157,7 @@
 
   Now with the tile palette, you can draw on the scene, reorganize everything and many other things
 
-  ![tilePalette](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/tilePalette.png)
+  ![tilePalette](images\tilePalette.png)
 
   From the top, there are many icons, we will go through each of them
 
@@ -431,7 +431,7 @@
 
   Else, look in Unity docs. To test particles, use the Particle Effects window. This will control preview
 
-  ![partE](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/partE.png)
+  ![partE](images\partE.png)
 
   <a name="coll"></a>
 
@@ -447,7 +447,7 @@
 
   1. Find a sprite or animation to use as collectable. For simplicity, I will use a sprite like this:
 
-     <img src="C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/gem.png" alt="gem" style="zoom:33%;" />
+     <img src="images\gem.png" alt="gem" style="zoom:33%;" />
 
   2. Drag gem into level
 
@@ -455,7 +455,7 @@
 
   4. Add a new tag and select it of the gem
 
-     ![tag](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/tag.png)
+     ![tag](images\tag.png)
 
   5. Within the player movement, we need to detect the collision overlaps and if an element of the tag overlaps the player, destroy object
 
@@ -572,7 +572,7 @@
 
   2. Click on animation dropdown -> Create New Clip...
 
-     ![animation](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/animation.png)
+     ![animation](images\animation.png)
 
   3. Save the new animation
 
@@ -586,7 +586,7 @@
 
   8. Right click on the **Any State** node -> Make Transition
 
-     ![states](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/states.png)
+     ![states](images\states.png)
 
   9. We will link the idle animation to the other transitions, therefore, after selecting make transition, click on idle and this will connect any state to idle
 
@@ -646,7 +646,7 @@
 
      
 
-     <img src="C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/button.png" alt="button" style="zoom:50%;" /><img src="C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/pressedButton.png" alt="pressedButton" style="zoom:50%;" /><img src="C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/platform.png" alt="platform" style="zoom:70%;" />
+     <img src="images\button.png" alt="button" style="zoom:50%;" /><img src="images\pressedButton.png" alt="pressedButton" style="zoom:50%;" /><img src="images\platform.png" alt="platform" style="zoom:70%;" />
 
      
 
@@ -730,11 +730,11 @@
 
   \* If you need pixel art to practice this section, take this:
 
-  <img src="C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/heartPerson.png" alt="heartPerson" style="zoom:100%;" />
+  <img src="images\heartPerson.png" alt="heartPerson" style="zoom:100%;" />
 
   Click on Filter Mode -> Point (no filter)
 
-  ![pixel](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/pixel.png)
+  ![pixel](images\pixel.png)
 
   The point mode is like a nearest neighbour in Photoshop. This way, if you scale it, you will get the pixels to snap sharply. 
 
@@ -774,9 +774,9 @@
 
   Otherwise, if starting and stopping the music is not a concern, just drag the music clip into the Audio Clip box and you are done
 
-  ![music](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/music.png)
+  ![music](images\music.png)
 
-  ![music2](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/music2.png)
+  ![music2](images\music2.png)
 
   Below are some more options. Some important ones are the 
 
@@ -963,7 +963,7 @@
 
   5. To see the empty object that will act as a wall detector, press the cube icon and click on a large tag
 
-     ![detector](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/detector.png)
+     ![detector](images\detector.png)
 
   6. Place empty object in front of the creature such that if that empty interacts a wall, the creature will turn
 
@@ -1123,7 +1123,7 @@
 
   2. Select the scenes that you want to build
 
-     ![build](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/build.png)
+     ![build](images\build.png)
 
   3. Select the desired **Platform**
 
@@ -1149,7 +1149,7 @@
 
   2. Download ZIP after clicking Clone or download
 
-     ![download](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/download.png)
+     ![download](images\download.png)
 
   3. Unzip and move to desired directory
 
@@ -1173,7 +1173,7 @@
 
   If you need to collaborate, the best way is to use Unity's Collab feature
 
-  ![collab](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/collab.png)
+  ![collab](images\collab.png)
 
   However, note that this only supports 4 people (which is usually enough because only people that will contribute to the codebase should need it)
 
