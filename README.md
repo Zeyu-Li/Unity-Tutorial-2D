@@ -1040,7 +1040,7 @@
 
   
 
-  <a name="#end2d"></a>
+  <a name="end2d"></a>
 
   #### 4n End Note
 
@@ -1056,7 +1056,7 @@
 
   One of the last things to do is to create a title screen 
 
-  See [here]() for title screen section
+  See [here](https://github.com/Zeyu-Li/unity-user-guide#title) for title screen section
 
   
 
