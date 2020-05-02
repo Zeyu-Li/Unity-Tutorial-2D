@@ -201,7 +201,7 @@ This can be done if you;
 
 1. Select the player and add a Rigidbody 2D
 
-   ![rigid](C:/Users/zeyul/Documents/GitHub/unity-user-guide/images/rigid.png)
+   ![rigid](images/rigid.png)
 
 2. Open up the Rigidbody 2D and go to constraints. If you want the player to not rotate in 2D, then select **Freeze Rotation Z**
 
