@@ -31,6 +31,7 @@ I will start at the beginning and work my way through the variations avenues you
    * [Parallax](#par)
    * [Odds and Ends](#odds)
    * [End Note](#end2d)
+     * [End Product](#finished)
 5. [Title Screen](#title)
 6. [Scripting](#script)
 7. [Building](#build)
@@ -400,7 +401,7 @@ To add a particle system;
    1. Go to photo editor of chose (Adobe Photoshop, illustrator, or GIMP work great)
    2. Make your single particle or collection of particles
    3. Save
-4. To use the custom particles, goto renderer -> material -> sprite default
+4. To use the custom particles, go to renderer -> material -> sprite default
 5. Now enable **Texture Sheet Animation**
 6. Mode -> ~~Grid~~ -> sprites
 7. Select objects
@@ -634,13 +635,13 @@ I will do a counter for simplicity
 
   
 
-  /* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
+  \* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
 
   <a name="events"></a>
 
   #### 4i Events
 
-  Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, Let's implement a button that triggers a platform. /* Note tis is very similar to a buttoned door
+  Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, Let's implement a button that triggers a platform. \* Note tis is very similar to a buttoned door
 
   1. Have a button and platform object ready. If not, feel free to use the ones below
 
@@ -728,7 +729,7 @@ I will do a counter for simplicity
 
   Otherwise when importing your pixel artwork or spritesheet; 
 
-  /* If you need pixel art to practice this section, take this:
+  \* If you need pixel art to practice this section, take this:
 
   <img src="images/heartPerson.png" alt="heartPerson" style="zoom:100%;" />
 
@@ -904,7 +905,7 @@ I will do a counter for simplicity
      }
      ```
 
-     /* Optionally, you can just add this to the movement player script
+     \* Optionally, you can just add this to the movement player script
 
   5. Drag to player collider
 
@@ -1036,7 +1037,7 @@ I will do a counter for simplicity
 
   in the update method
 
-  /* Note, of course more logic could be added to make this more complicated
+  \* Note, of course more logic could be added to make this more complicated
 
   
 
@@ -1046,7 +1047,15 @@ I will do a counter for simplicity
 
   I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3/issues) and open a new issue. Again, thanks for viewing and good luck to your future Unity endeavors. 
 
-  
+
+
+<a name="finished"></a>
+
+**End Product**
+
+![game](_RawFileAssets\game.gif)
+
+
 
   [🔝 Back to Top](#top)
 
@@ -1101,7 +1110,7 @@ I will do a counter for simplicity
 
   
 
-  /* A class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
+  \* A class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
 
   A list of other functions and methods that can be used can be found on the [Unity Documentation](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) site, however, the most important thing about learning and debugging Unity is to use
 
@@ -1135,7 +1144,7 @@ I will do a counter for simplicity
 
   
 
-  /* Note if you did not add an exit game button, the only way to exit is to close the program externally or Alt-f4
+  \* Note if you did not add an exit game button, the only way to exit is to close the program externally or Alt-f4
 
   
 
@@ -1202,7 +1211,7 @@ I will do a counter for simplicity
   ### 10. Resources
 
   * The [Unity User Manual](https://docs.unity3d.com/Manual/index.html) provides some great documentation with code that can for the most part be copied and pasted
-  * Brackeys [YouTube channel](https://www.youtube.com/user/Brackeys)
+  * Brackey's [YouTube channel](https://www.youtube.com/user/Brackeys)
   * [Lynda.com](https://www.lynda.com/) - If you have a library card, there is a high probability that you have access to Lynda with their organization deal
   * Google is your best friend
   * Ask on Reddit or Stack Exchange, don't worry they won't bite
