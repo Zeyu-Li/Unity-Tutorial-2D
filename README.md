@@ -1053,7 +1053,7 @@ I will do a counter for simplicity
 
 **End Product**
 
-![game](_RawFileAssets\game.gif)
+![game](_RawFileAssets/game.gif)
 
 
 
