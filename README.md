@@ -811,7 +811,7 @@ For changing controls, go to Project Settings -> Input Manager and you can chang
 
 <a name="linked_scenes"></a>
 
-**Linking Scenes**
+#### Linking Scenes
 
 Linking scenes is quite easy and just requires knowledge of the following:
 
@@ -829,7 +829,7 @@ Linking scenes is quite easy and just requires knowledge of the following:
 
 <a name="death_zone"></a>
 
-**Death Zones**
+#### Death Zones
 
 For this exercise, I will create a death zone if the player is out of bounds, however, this could easily be modified such that they are spikes. 
 
@@ -866,7 +866,7 @@ For this exercise, I will create a death zone if the player is out of bounds, ho
 
 <a name="enemies"></a>
 
-**Enemies**
+#### Enemies
 
 Enemies are an important yet complicated thing. They can be static, or mobile. Have easy or tough AI, or creates projectiles. For this example I will do medium-easy example of a creature in a box moving back and forth
 
@@ -924,7 +924,7 @@ Enemies are an important yet complicated thing. They can be static, or mobile. H
 
 <a name="pausing"></a>
 
-**Pausing**
+#### Pausing
 
 Pausing with Unity can be made simple with one command. 
 
@@ -971,7 +971,7 @@ Resource: https://www.youtube.com/watch?v=JivuXdrIHK0
 
 <a name="quit"></a>
 
-**Quit**
+#### Quit
 
 To quit game simply add the following onto the player:
 
