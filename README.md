@@ -446,7 +446,9 @@ There are two parts to a collectible:
 We will start with 1. the collection of an item
 
 1. Find a sprite or animation to use as collectable. For simplicity, I will use a sprite like this:
+   
    <img src="images/gem.png" alt="gem" style="zoom:33%;" />
+   
 2. Drag gem into level
 3. Add collider (I think box collider works best here) and check **Is Trigger**
 4. Add a new tag and select it of the gem
@@ -479,7 +481,6 @@ I will do a counter for simplicity:
    4. Change layering order on canvas so it is in front
    5. Position it right. You may also chose to have a image accompanying the counter
    6. Create a collectablesManager script with the following:
-
       ```c#
       using System.Collections;
       using System.Collections.Generic;
@@ -509,7 +510,6 @@ I will do a counter for simplicity:
    7. Create empty to house the collectablesManager script and drag the script in
    8. Drag the text score into the Text field
    9. Now gems script and populate with the following: 
-
       ```c#
       using System.Collections;
       using System.Collections.Generic;
@@ -555,6 +555,7 @@ To add different actions connected to the original animation:
 
   1. Go to the Animations window when the original animation is selected
   2. Click on animation dropdown -> Create New Clip...
+
      ![animation](images/animation.png)
   3. Save the new animation
   4. It is recommended that you change the sample frame to the original animation's sample frame
