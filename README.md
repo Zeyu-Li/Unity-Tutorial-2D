@@ -9,34 +9,46 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 ## Index
 
 1. [Installation](#install)
+
 2. [General](#main)
+
 3. [Unity Editor Overview](#unity)
-4. [2D](#2D)
-   * [General](#2dg)
-   * [Sprites](#spr)
-   * [Movement](#move)
-   * [Camera](#camera)
-     * [Background](#background)
-     * [Camera Follow](#camera_follow)
-   * [Prefabs](#pref)
-   * [Particle System](#partsys)
-   * [Collectibles](#coll)
-   * [Animation](#anim)
-   * [Events](#events)
-   * [Pixelated](#pix)
-   * [Music & Sounds](#music)
-   * [Parallax](#par)
-   * [Odds and Ends](#odds)
-   * [End Note](#end2d)
-     * [End Product](#finished)
-5. [Title Screen](#title)
-6. [Scripting](#script)
-7. [Building](#build)
-8. [Cloning Guide](#guide)
-9. [Collaboration](#team)
-   * [Unity's Collab](#unity) (recommended)
-   * [GitHub](#git)
-10. [Resources](#help)
+
+#### [2D](#2D)
+
+4. [General](#2dg)
+5. [Sprites](#spr)
+6. [Movement](#move)
+7. [Camera](#camera)
+
+   * [Background](#background)
+   * [Camera Follow](#camera_follow)
+8. [Prefabs](#pref)
+9. [Particle System](#partsys)
+10. [Collectibles](#coll)
+11. [Animation](#anim)
+12. [Events](#events)
+13. [Pixelated](#pix)
+14. [Music & Sounds](#music)
+15. [Parallax](#par)
+16. [Odds and Ends](#odds)
+    * [Linking Scenes](#linked_scenes)
+    * [Death Zone](#death_zone)
+    * [Enemies](#enemies)
+    * [Pausing](#pausing)
+    * [Quiting](#quit)
+17. [End Note](#end2d)
+    * [Demo](#finished)
+18. [Title Screen](#title)
+19. [Scripting](#script)
+20. [Building](#build)
+21. [Cloning Guide](#guide)
+22. [Collaboration](#team)
+
+    * [Unity's Collab](#unity_collab) (recommended)
+
+    * [GitHub](#git)
+23. [Resources](#help)
 
 
 
@@ -44,13 +56,13 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 
 ### 1. Installation
 
-Before installing, note that Unity is completely free forever, if you or your company makes less than $100 000 (USD). 
+Before installing, note that Unity is **completely free**, if you or your company makes less than $100 000 (USD). 
 
-Follow the link [here](https://store.unity.com/download) and download the free installer (the plus version is definitely not necessary). Follow the instructions and download the installer. The installer is simple and easy however, if you run into trouble, go to this [video](https://www.youtube.com/watch?v=KMuMhA6Lk0I) for Windows. Also note that you will may need a Unity account or just use your Google/ Facebook account to sign in. 
+Follow the link [here](https://store.unity.com/download) and download the free installer (the plus version is definitely not necessary). Follow the instructions and download the installer. The Unity installer is simple and easy to use nevertheless, this [video](https://www.youtube.com/watch?v=KMuMhA6Lk0I) for Windows is a tutorial in installing it. Also note that you will may need a Unity account or just use your Google/Facebook account to sign in. 
 
-If you want a new version of Unity, go to the Unity Hub and click the **Installs** tab on the left and **add** (top right) the desired version. Afterwards, the installation will take quite a while, even with a fast internet connection. 
+If you want a new version of Unity, go to the Unity Hub and click the **Installs** tab on the left and **ADD** (top right) the desired version (it is recommended that you pick a version with **long term support** or LTS); however do be warned that this tutorial was made in **2019.3** so in newer versions, things might have moved places or removed entirely 😞. Afterwards, the installation will take quite a while, even with a fast internet connection. 
 
-When installing Unity, it might ask you to install **Visual Studio** along-side Unity. If you have Visual Studio, do not install again, it should automatically detect the current VS on the system. Otherwise, it is optional and I've heard that MonoDevelop (comes with Unity) is good enough for handling the tasks Unity puts forth. 
+When installing Unity, it might ask you to install **Visual Studio** along-side Unity. If you have Visual Studio, do not install again, it should automatically detect the current VS on the system. Otherwise, it is optional and MonoDevelop (comes with Unity) is good enough for handling coding in Unity. 
 
 
 
@@ -64,7 +76,9 @@ When installing Unity, it might ask you to install **Visual Studio** along-side 
 Debug.Log() // logs to Unity console
 ```
 
-is your friend. Also organize your scenes by naming them or using empties as folders (+1 organization). Now, it is time to pick, 2D or 3D. (As a beginner, start with 2D)
+is your friend. 
+
+Being organized in Unity is a must, especially for big projects. Have organized folder will help a ton, in addition, using empties as folders within scene is *+1 organization*. 
 
 
 
@@ -86,27 +100,27 @@ Other panels include a console, which will output when the game is run. The **An
 
 <a name="2D"></a>
 
-### 4. 2D
+## 2D
 
 <a name="2dg"></a>
 
-#### 	4a General
+### 	4 General
 
-So you've decide to make a 2D game. Great! Who needs modelling and lighting (It's a lot of work anyways)? 
+So you've decide to make a 2D game. Great! Who needs modelling and lighting anyways? 
 
 2D games are secretly 3D, what does that mean? Think of Unity 2D as a bunch of layers like in Photoshop, Gimp, After Effects, or Illustrator. The closest to the camera is picked up first and blocks the ones behind it. As a 2D world, lighting is global (unless you want enable an experimental local lighting feature). To start a new 2D game, click **New** and select 2D on the pop-up screen and use the desired directory (or follow my cloning [guide](#guide) so to not start from starch). This may take some time, but after Unity finishes installing itself, we can get started. Now let's make a player and make it move!
 
-*Note, part of the tutorial (2D) follows this [repo](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3): [Unity-Template-2D-2019_3](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3)
+*Note, part of the tutorial (2D) follows this repo: [Unity-Tutorial-2D](https://github.com/Zeyu-Li/Unity-Tutorial-2D)
 
 
 
 <a name="spr"></a>
 
-#### 	4b Sprites
+### 	5 Sprites
 
 Sprites are what make up the visuals of the game. These could be png or jpeg (recommended because of small size) file. You can make your own and drag them into an **Artworks folder**.
 
-If you have multiple sprites on a picture file, you have what is called a sprite sheet. These could be useful because it saves space. Unity comes with a sprite editor that can cut the sprite sheet into multiple sprites. 
+If you have multiple sprites on a picture file, you have what is called a **sprite sheet**. These could be useful because it saves space. Unity comes with a sprite editor that can cut the sprite sheet into multiple sprites. 
 
 However, before we get to that, let us take a look at the Sprite setting
 
@@ -124,7 +138,7 @@ From the header we also see:
 * Filter Mode - Point (equivalent to pixel perfect or nearest neighbour in Photoshop) or Bilinear (natural scaling with edge softening)
 * Format - Format of image (8bit, 16 bit, 32 bit colour with or without alpha)
 
-*Note, if a setting was not mentioned, it is not that important at the beginner level.
+\* Note, if a setting was not mentioned, it is not that important at the beginner level.
 
 **Multiple Sprites**
 
@@ -144,20 +158,18 @@ From the header we also see:
 
 Now, with a sprite, you can drag it into the scene
 
-To create a tile map, follow the following:
+To create a tile map, follow the steps below:
 
 1. GameObject -> 2D Object -> Tile Map
 2. Open Tile Palette, by going to Window -> 2D -> Tile Palette
 3. Create New Palette and save it
 4. Drag all individual tiles into widget or drag parent spritesheet (and save)
 
-
-
 Now with the tile palette, you can draw on the scene, reorganize everything and many other things
 
 ![tilePalette](images/tilePalette.png)
 
-From the top, there are many icons, we will go through each of them
+From the top, there are many icons, we will go through each of them,
 
 * Curser - selects tiles from scene
 * Move - Moves tiles in palette (Only if you click **Edit**)
@@ -167,15 +179,11 @@ From the top, there are many icons, we will go through each of them
 * Eraser - Erases
 * Paint Bucket - Floods with active brush (Like Photoshop)
 
-
-
-To layer tiles, 
+To layer tiles:
 
 * Right click on the tile map -> 2D -> Tilemap for however many more layers you need
 
-
-
-To set a layer as a solid with collision, 
+To set a layer as a solid with collision:
 
 1. go to the layer you want to make solid
 2. Add Component -> search add Tilemap Collider 2D
@@ -186,15 +194,11 @@ Resources: [Brackeys](https://www.youtube.com/watch?v=ryISV_nH8qw)
 
 <a name="move"></a>
 
-#### 	4c Movement
+### 	6 Movement
 
-Movement is critical in all games, whether the movement is limited to left or right, or games that in 3D. On the internet there are may sources that claim the perfect jump, but only you can decide that based on the gameplay. 
+Movement is critical in all games, whether the movement is limited to left or right, or games that in 3D. On the internet there are may sources that claim the perfect jump, but only you can decide that based on what type of gameplay you want. 
 
-To start off with;
-
-Set your player to be a rigid body with colliders
-
-This can be done if you;
+To start off with, set your player to be a rigid body with colliders:
 
 1. Select the player and add a Rigidbody 2D
 
@@ -209,7 +213,7 @@ This can be done if you;
 Now for the movement:
 
 1. make a new folder called **scripts**
-2. right click -> Create -> C# Script -> call it movement or something
+2. right click -> Create -> C# Script -> call it **movement** (although you can pick any name you want, this is standard)
 
 Next, you want to open the script by double clicking on it
 
@@ -293,17 +297,28 @@ void FixedUpdate() {
 }
 ```
 
-Save and exit. Now, when you click on the player, movement script, there will be options for you to tinker with. Note, you will need to make a isGrounded empty object to be placed at the feet of the player to see if there is **ground layer **(must set ground layer to ground objects that can be jumped on) beneath the player to jump off of. Also note that this script has a jump that can be a multitude of heights depending on how long the jump button is held down for.
+Save and exit. Now, when you click on the player, movement script, there will be options for you to tinker with. 
 
-Also, for the player to not stick to the walls while jumping, you must add a new physics material 2D. Change friction to 0 and bounciness to whatever you want it to be and apply to player in the collider
+Finally for jumping you need to:
 
-from https://www.youtube.com/watch?v=j111eKN8sJw
+1. Set ground layer to ground objects that can be jumped on
+2. Make a isGrounded empty object to be placed at the feet of the player to check if there is **ground layer **beneath the player to jump off of
+
+\* Note that this script has a jump that can be a multitude of heights depending on how long the jump button is held down for.
+
+Also, for the player to not stick to the walls while jumping, you must:
+
+1. Add a new physics material 2D
+2. Change friction to 0 and bounciness to whatever you want it to be 
+3. Apply to player in the collider
+
+Resource: https://www.youtube.com/watch?v=j111eKN8sJw
 
 
 
 <a name="camera"></a>
 
-#### 	4d Camera
+### 	7 Camera
 
 The camera will capture things on from the scene to project onto the play window. 
 
@@ -344,7 +359,7 @@ When implementing a camera, there are two options, however, we will through the 
    }
    ```
 
-   You will have to drag the player to target and change the smoothing if you like
+   You will have to drag the player to target and change the smoothing value if you like more or less smoothing
 
    
 
@@ -358,7 +373,7 @@ To use Cinemachine, one must first install the extension as it does not come in 
 
 1. window -> Package Manager -> **Search: **Cinemachine -> click install
 
-Now to use it
+Now to use it:
 
 1. Cinemachine -> Create 2D Camera
 2. Embed CM vcam into main camera (optional)
@@ -372,17 +387,17 @@ Now to use it
 10. **Look ahead** is the direction the player is moving towards
 11. Play around with these setting
 
-
-
 Resource: https://www.youtube.com/watch?v=MFQhpwc6cKE or https://www.youtube.com/watch?v=2jTY11Am0Ig
+
+
 
 <a name="pref"></a>
 
-#### 	4e Prefab
+### 	8 Prefab
 
 A prefab is simply a clone that can be dragged to the scene
 
-This means that things in other scenes can be reused
+This means that things from other scenes can be reused
 
 To make a prefab, just drag the desired prefab object from scene to the prefabs folder
 
@@ -390,11 +405,11 @@ To make a prefab, just drag the desired prefab object from scene to the prefabs 
 
 <a name="partsys"></a>
 
-#### 	4f Particle System
+### 	9 Particle System
 
 A particle system adds an extra layer of immersion that is quite simple in Unity. 
 
-To add a particle system;
+To add a particle system:
 
 1. Right click hierarchy -> Effects -> Particle System
 2. Remember, default is some circled with soft edges
@@ -407,9 +422,7 @@ To add a particle system;
 6. Mode -> ~~Grid~~ -> sprites
 7. Select objects
 
-To customize particle system, 
-
-There are near infinite options in the inspector. Most options are self explanatory. Some of the common options changes are
+There are near infinite options in the inspector for particle systems. Most options are self explanatory. Some of the most common options to change are:
 
 * Loop - for ambient particles that need to on screen all the time
 
@@ -429,23 +442,25 @@ There are near infinite options in the inspector. Most options are self explanat
 * Shape -> Randomize Direction - changes starting velocity vector
 * Shape -> Spherize Direction - Moves out from center
 
-*Note for some options like start speed, lifetime, size, etc, you can pick from an interval
+\* Note for some options like start speed, lifetime, size, etc, you can pick from an interval
 
-Else, look in Unity docs. To test particles, use the Particle Effects window. This will control preview
+If there is some setting I haven't mentioned but look interesting, refer to the Unity docs. To test particles, use the Particle Effects window. This will control preview
 
 ![partE](images/partE.png)
 
+
+
 <a name="coll"></a>
 
-#### 4g Collectibles
+### 10 Collectibles
 
-There are two parts to a collectible, 
+There are two parts to a collectible: 
 
-a. collection of the item
+1. The collection of the item
 
-b. the storage of the item in inventory
+2. The storage of the item in inventory
 
-We will start with a. the collection of an item
+We will start with 1. the collection of an item
 
 1. Find a sprite or animation to use as collectable. For simplicity, I will use a sprite like this:
 
@@ -475,9 +490,9 @@ We will start with a. the collection of an item
 
 Now we must consider the storage of the item in inventory. Note this can be as easy as a counter or a full fledged inventory
 
-I will do a counter for simplicity
+I will do a counter for simplicity:
 
-1. While we are adding a counter, it is also a convenient time to add a sound of collecting the item. 
+\* Note while we are adding a counter, it is also a convenient time to add a sound of collecting the item. 
 
 2. Resources for audio clip: [here](https://docs.unity3d.com/ScriptReference/AudioSource.Play.html) & [here](https://docs.unity3d.com/ScriptReference/AudioSource-clip.html) but I used [PlayOneShot](https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html) 
 
@@ -552,15 +567,18 @@ I will do a counter for simplicity
 
 Resource: https://www.youtube.com/watch?v=DZ-3g31jk90
 
+
+
 <a name="anim"></a>
 
-  #### 4h Animation
+  ### 11 Animation
 
 Animation is critical in creating any game that does not look static. In Unity, animation is handled by Animator and Animation windows. The **Animator** is a node based system while the **Animations** is a timeline based.
 
-  1. To make an animation, simply drag more than 1 picture into the scene
+To make an animation, simply:
 
-  2. Save your animations in the animations folder
+    1. Drag more than 1 picture into the scene
+    2. Save your animations in the animations folder
 
 You have made your first animation
 
@@ -568,7 +586,7 @@ To adjust your animation, go to the animator window and clip on the orange node.
 
 You can change the speed here
 
-To add different actions connected to the original animation; 
+To add different actions connected to the original animation:
 
   1. Go to the Animations window when the original animation is selected
 
@@ -634,15 +652,15 @@ To add different actions connected to the original animation;
       }
       ```
 
-  
-
 \* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
+
+
 
 <a name="events"></a>
 
-  #### 4i Events
+  ### 12 Events
 
-Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, Let's implement a button that triggers a platform. \* Note tis is very similar to a buttoned door
+Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, let's implement a button that triggers a platform. 
 
   1. Have a button and platform object ready. If not, feel free to use the ones below
 
@@ -720,7 +738,7 @@ As you can see, using what we already know, we can get a lot of events to work! 
 
 <a name="pix"></a>
 
-  #### 4j Pixelated
+  ### 13 Pixelated
 
 Perhaps you want your game to have a pixelized feel, thankfully, it is not too much work to do that with Unity. 
 
@@ -742,9 +760,11 @@ The point mode is like a nearest neighbour in Photoshop. This way, if you scale 
 
 You may also change the pixels per unit to your desired size. 
 
+
+
 <a name="music"></a>
 
-  #### 4k Music & Sounds
+  ### 14 Music & Sounds
 
 Music is curial to a game's level of emersion. While I will not go into music theory and music in general, I will help you get familiar with how Unity handles sounds. This is something Unity does really well, so not much can be said in the chapter. 
 
@@ -787,9 +807,11 @@ Below are some more options. Some important ones are the
   3. Volume - volume of track
   4. Pitch - shifts pitch (not recommended)
 
-  <a name="par"></a>
 
-  #### 4l Parallax
+
+<a name="par"></a>
+
+  ### 15 Parallax
 
 Parallax is a popular way of displaying movement, especially if the game is a bit static.
 
@@ -844,19 +866,21 @@ What parallax does is like a old film reel, but instead of new frames, it is a r
 
   5. Drag the main camera in the camera slot and play with the parallax number (between 1 to 0) to see how much parallax you want
 
-  
-
 Resource: https://www.youtube.com/watch?v=zit45k6CUMk
+
+
 
 <a name="odds"></a>
 
-  #### 4m Odds and Ends
+  ### 16 Odds and Ends
 
 For changing controls, go to Project Settings -> Input Manager and you can change your input from there
 
+<a name="linked_scenes"></a>
+
 **Linking Scenes**
 
-Linking scenes is quite easy and just requires knowledge of the following
+Linking scenes is quite easy and just requires knowledge of the following:
 
   1. When moving to another scene (this will usually involve a detection collider), simply put
 
@@ -870,6 +894,8 @@ Linking scenes is quite easy and just requires knowledge of the following
   ```
 
   
+
+<a name="death_zone"></a>
 
 **Death Zones**
 
@@ -910,7 +936,9 @@ For this exercise, I will create a death zone if the player is out of bounds, ho
 
   5. Drag to player collider
 
-     
+
+
+<a name="enemies"></a>
 
 **Enemies**
 
@@ -977,6 +1005,8 @@ Enemies are an important yet complicated thing. They can be static, or mobile. H
 
 
 
+<a name="pausing"></a>
+
 **Pausing**
 
 Pausing with Unity can be made simple with one command. 
@@ -1021,9 +1051,11 @@ Pausing with Unity can be made simple with one command.
 
   4. Place the UI element in the Pause menu box
 
-  
-
 Resource: https://www.youtube.com/watch?v=JivuXdrIHK0
+
+
+
+<a name="quit"></a>
 
 **Quit**
 
@@ -1044,15 +1076,13 @@ in the update method
 
   <a name="end2d"></a>
 
-  #### 4n End Note
+  ### 17 End Note
 
-I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3/issues) and open a new issue. Again, thanks for viewing and good luck to your future Unity endeavors. 
-
-
+I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Tutorial-2D/discussions) and open a discussion. Again, thanks for viewing and good luck to your future Unity endeavors. 
 
 <a name="finished"></a>
 
-**End Product**
+**End Product/Demo**
 
 ![game](_RawFileAssets/game.gif)
 
@@ -1060,9 +1090,7 @@ I hope you had a good taste of Unity 2D. Of course, this was just a very brief i
 
 [🔝 Back to Top](#top)
 
-
-
-  ### 5. Title Screen
+  ### 18 Title Screen
 
 One of the last things to do is to create a title screen 
 
@@ -1070,11 +1098,11 @@ See [here](https://github.com/Zeyu-Li/unity-user-guide#title) for title screen s
 
   
 
-  <a name="script"></a>
+<a name="script"></a>
 
-  ### 6. Scripting
+  ### 19 Scripting
 
-Unity is based on C# and is very much a c-styled programming language. That means it resembles programs that are written in C, C++, F#, or Java. 
+Unity is based on C# and is very much a c-styled programming language. That means it resembles programs that are written in C, C++, or Java. 
 
 The main thing to know though is Unity's implementation of C#
 
@@ -1103,15 +1131,11 @@ If you create a script, automatically, it will be drawn from a template that loo
 
 You will notice that at the top there are imports from Unity's other libraries using the **using** keyword. Afterwards, Unity defines the script as a class*. The class is defined as public so other scripts and Unity can assess and utilize this class. The name you gave the script will follow the **class** keyword. Afterwards, **MonoBehaviour** is defined as what movement inherits from. Think of this as your script **extending** from class MonoBehaviour. 
 
-  
+\* Note a class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
 
 Below that and indented, we see void Start() and void Update(). As the comments suggest, void Start() occurs before the first frame update and void Update() is called once per frame. Note **void** means there will not be a return value (ie no return statement).
 
 Also, there are different methods of MonoBehaviour such as **FixedUpdate()** that may update more or less than once per frame. This will be important for any physics related functions
-
-  
-
-\* A class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
 
 A list of other functions and methods that can be used can be found on the [Unity Documentation](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) site, however, the most important thing about learning and debugging Unity is to use
 
@@ -1125,7 +1149,7 @@ When using this, after running the game, it will output to Unity's debug console
 
   <a name="build"></a>
 
-  ### 7. Build
+  ### 20 Build
 
 So you are finished your game. You need to disturbed the game. This is done through building the game. 
 
@@ -1143,19 +1167,17 @@ So you are finished your game. You need to disturbed the game. This is done thro
 
   6. Select the folder and wait for it to build
 
-  
-
 \* Note if you did not add an exit game button, the only way to exit is to close the program externally or Alt-f4
 
   
 
 <a name="guide"></a>
 
-  ### 8. Cloning Guide
+  ### 21 Cloning Guide
 
-From my [GitHub](https://github.com/Zeyu-Li?tab=repositories):
+To download the finished project:
 
-  1. Find the right Unity Repo to clone from my account (ie [Unity-Template-2D-2019_3](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3), [Unity-Template-3D-2019](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3)) 
+  1. Go to https://github.com/Zeyu-Li/Unity-Tutorial-2D
 
   2. Download ZIP after clicking Clone or download
 
@@ -1169,13 +1191,17 @@ From my [GitHub](https://github.com/Zeyu-Li?tab=repositories):
 
   6. Click on the project to open it
 
-  
+  \* Note if you want the project at different steps click on commits or https://github.com/Zeyu-Li/Unity-Tutorial-2D/commits/master and between Feb 26, 2020 `added logo` commit to April 12, 2020 `finished Unity template game` is when various steps where completed. To download the project file at these times, click on the bracket thing (see below) and repeat above from step 2
+
+![history](images/history.jpg)
+
+
 
 <a name="team"></a>
 
-  ### 9. Collaboration
+  ### 22 Collaboration
 
-<a name="unity"></a>
+<a name="unity_collab"></a>
 
   #### Unity's Collab
 
@@ -1193,7 +1219,7 @@ However, note that this only supports 4 people (which is usually enough because 
 
   #### GitHub
 
-Otherwise if you are a masochistic and decide to GitHub, here are some general practices:
+Otherwise if you decide to GitHub, here are some general practices:
 
   1. Everyone should work on there own branches and work on there own scenes working towards **Prefabs** (ie one person on movement, one on moving platforms, etc.)
   2. Optionally, have one person on the master (final) level to peace it together
@@ -1209,7 +1235,7 @@ Otherwise if you are a masochistic and decide to GitHub, here are some general p
 
 <a name="Help"></a>
 
-  ### 10. Resources
+  ### 23 Resources
 
   * The [Unity User Manual](https://docs.unity3d.com/Manual/index.html) provides some great documentation with code that can for the most part be copied and pasted
   * Brackey's [YouTube channel](https://www.youtube.com/user/Brackeys)
