@@ -13,7 +13,6 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 3. [Unity Editor Overview](#unity)
 
 #### [2D](#2D)
-
 4. [General](#2dg)
 5. [Sprites](#spr)
 6. [Movement](#move)
@@ -190,6 +189,7 @@ Movement is critical in all games, whether the movement is limited to left or ri
 To start off with, set your player to be a rigid body with colliders:
 
 1. Select the player and add a Rigidbody 2D
+
    ![rigid](images/rigid.png)
 2. Open up the Rigidbody 2D and go to constraints. If you want the player to not rotate in 2D, then select **Freeze Rotation Z**
 3. Otherwise, add a **Collider 2D** to fit the player. Depending on how your player's form, different shapes may be better. Try the different collider options to see which ones fit best. Most of the time, a **Box Collider 2D** will work just fine. Also note that you can use multiple colliders, but remember, this is computationally more expensive.
@@ -563,6 +563,7 @@ To add different actions connected to the original animation:
   6. To change the pictures per second, drag the blue bar (all frames must be selected ie in blue)
   7. Now to move from any one animation (or state as it is called), go to the **Animator** window
   8. Right click on the **Any State** node -> Make Transition
+
      ![states](images/states.png)
   9. We will link the idle animation to the other transitions, therefore, after selecting make transition, click on idle and this will connect any state to idle
   10. Also make transition to walk (or any other animation) from any state
