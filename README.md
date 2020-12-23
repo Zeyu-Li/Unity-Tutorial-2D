@@ -9,9 +9,7 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 ## Index
 
 1. [Installation](#install)
-
 2. [General](#main)
-
 3. [Unity Editor Overview](#unity)
 
 #### [2D](#2D)
@@ -20,7 +18,6 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 5. [Sprites](#spr)
 6. [Movement](#move)
 7. [Camera](#camera)
-
    * [Background](#background)
    * [Camera Follow](#camera_follow)
 8. [Prefabs](#pref)
@@ -44,9 +41,7 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 20. [Building](#build)
 21. [Cloning Guide](#guide)
 22. [Collaboration](#team)
-
     * [Unity's Collab](#unity_collab) (recommended)
-
     * [GitHub](#git)
 23. [Resources](#help)
 
@@ -143,17 +138,11 @@ From the header we also see:
 **Multiple Sprites**
 
 1. Select Multiple in **Sprite Mode**
-
 2. Click **Spirit Editor** button
-
    ![spriteEditor](images/spriteEditor.png)
-
 3. In sprite editor, click Slice -> Slice (This is an automatic slicer and is usually good enough, if not, manually move the transform bound boxes to fit or define split at distance apart (must change to **Grid by Size Count**, not **Automatic**) with the size of tile in **Pixel Size**.
-
 4. Click apply
-
 5. Close window or drag to some widget
-
 6. You can inspect every tile by expanding the original image and a bunch of tiles with name pictureName_0 to # of tiles with be a child of it
 
 Now, with a sprite, you can drag it into the scene
@@ -201,17 +190,12 @@ Movement is critical in all games, whether the movement is limited to left or ri
 To start off with, set your player to be a rigid body with colliders:
 
 1. Select the player and add a Rigidbody 2D
-
    ![rigid](images/rigid.png)
-
 2. Open up the Rigidbody 2D and go to constraints. If you want the player to not rotate in 2D, then select **Freeze Rotation Z**
-
 3. Otherwise, add a **Collider 2D** to fit the player. Depending on how your player's form, different shapes may be better. Try the different collider options to see which ones fit best. Most of the time, a **Box Collider 2D** will work just fine. Also note that you can use multiple colliders, but remember, this is computationally more expensive.
-
 4. Also note that if you are not satisfied with Unity's default collider size, you can change the size by changing the **size** attribute
 
 Now for the movement:
-
 1. make a new folder called **scripts**
 2. right click -> Create -> C# Script -> call it **movement** (although you can pick any name you want, this is standard)
 
@@ -457,23 +441,16 @@ If there is some setting I haven't mentioned but look interesting, refer to the 
 There are two parts to a collectible: 
 
 1. The collection of the item
-
 2. The storage of the item in inventory
 
 We will start with 1. the collection of an item
 
 1. Find a sprite or animation to use as collectable. For simplicity, I will use a sprite like this:
-
    <img src="images/gem.png" alt="gem" style="zoom:33%;" />
-
 2. Drag gem into level
-
 3. Add collider (I think box collider works best here) and check **Is Trigger**
-
 4. Add a new tag and select it of the gem
-
    ![tag](images/tag.png)
-
 5. Within the player movement, we need to detect the collision overlaps and if an element of the tag overlaps the player, destroy object
 
    The is done by putting the following code somewhere in the player movement class (not in an update or start method)
@@ -485,7 +462,6 @@ We will start with 1. the collection of an item
        }
    }
    ```
-
 6. (Optional) If you want to reuse the gem, drag in Prefab folder
 
 Now we must consider the storage of the item in inventory. Note this can be as easy as a counter or a full fledged inventory
@@ -494,22 +470,14 @@ I will do a counter for simplicity:
 
 \* Note while we are adding a counter, it is also a convenient time to add a sound of collecting the item. 
 
-2. Resources for audio clip: [here](https://docs.unity3d.com/ScriptReference/AudioSource.Play.html) & [here](https://docs.unity3d.com/ScriptReference/AudioSource-clip.html) but I used [PlayOneShot](https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html) 
-
-3. Optionally, a collecting animation or particles could also be implemented
-
-4. However, we will jump directly to a collectables counter
-
+1. Resources for audio clip: [here](https://docs.unity3d.com/ScriptReference/AudioSource.Play.html) & [here](https://docs.unity3d.com/ScriptReference/AudioSource-clip.html) but I used [PlayOneShot](https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html) 
+2. Optionally, a collecting animation or particles could also be implemented
+3. However, we will jump directly to a collectables counter
    1. Create a text layer by clicking UI -> Text - TextMeshPro
-
    2. Click on canvas -> Render Mode -> Screen Space - Camera
-
    3. Assign Render Camera to current Main camera
-
    4. Change layering order on canvas so it is in front
-
    5. Position it right. You may also chose to have a image accompanying the counter
-
    6. Create a collectablesManager script with the following:
 
       ```c#
@@ -538,11 +506,8 @@ I will do a counter for simplicity:
           }
       }
       ```
-
    7. Create empty to house the collectablesManager script and drag the script in
-
    8. Drag the text score into the Text field
-
    9. Now gems script and populate with the following: 
 
       ```c#
@@ -589,50 +554,30 @@ You can change the speed here
 To add different actions connected to the original animation:
 
   1. Go to the Animations window when the original animation is selected
-
   2. Click on animation dropdown -> Create New Clip...
-
      ![animation](images/animation.png)
-
   3. Save the new animation
-
   4. It is recommended that you change the sample frame to the original animation's sample frame
-
   5. Drag all the new set of pictures to the timeline in the **Animations** window
-
   6. To change the pictures per second, drag the blue bar (all frames must be selected ie in blue)
-
   7. Now to move from any one animation (or state as it is called), go to the **Animator** window
-
   8. Right click on the **Any State** node -> Make Transition
-
      ![states](images/states.png)
-
   9. We will link the idle animation to the other transitions, therefore, after selecting make transition, click on idle and this will connect any state to idle
-
   10. Also make transition to walk (or any other animation) from any state
-
   11. To link these states up, go to **Parameters** tab in the Animator window and click **+** -> int
-
   12. Name it
-
   13. Select transition Any State to idle
-
   14. in the inspector, expand Settings and
-
       1. Uncheck **Fixed Duration** if you want no transition duration
       2. **Change Transition** Duration to 0
       3. Uncheck can transition to self
       4. In Conditions, click **+**
       5. Set it equal to 0
       6. Do the same thing for **Any State** to any other animation to the same parameter except change step 5 to equal to some other number
-
   15. Now to connect the animations with the code so it changes with the actions performed by the player
-
   16. Go to the player movement script
-
   17. Add the following:
-
       ```c#
       private Animator animator; //attribute in class
       
@@ -651,7 +596,6 @@ To add different actions connected to the original animation:
           }
       }
       ```
-
 \* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
 
 
@@ -663,19 +607,10 @@ To add different actions connected to the original animation:
 Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, let's implement a button that triggers a platform. 
 
   1. Have a button and platform object ready. If not, feel free to use the ones below
-
-     
-
      <img src="images/button.png" alt="button" style="zoom:50%;" /><img src="images/pressedButton.png" alt="pressedButton" style="zoom:50%;" /><img src="images/platform.png" alt="platform" style="zoom:70%;" />
-
-     
-
   2. If you want, drag the two buttons as an animation so you can change the sprites when touched, but I will not go through the animations
-
   3. Add a button tag onto the button
-
   4. Create a button script and paste the following into the script
-
      ```c#
      using System.Collections;
      using System.Collections.Generic;
@@ -729,7 +664,6 @@ Events are add much needed interactions into a game, but keep in mind that every
          }
      }
      ```
-
   5. Click on script, drag audio stuff or remove all audio parts from script and set the object to **Some Platform**, also set the timer for when it reverts back to normal (auto is 8 seconds)
 
 As you can see, using what we already know, we can get a lot of events to work! I know this may be challenging and you may run into bugs (hell, even I ran in many bugs), but persistent and challenge yourself and good luck!
@@ -818,11 +752,8 @@ Parallax is a popular way of displaying movement, especially if the game is a bi
 What parallax does is like a old film reel, but instead of new frames, it is a repeat of the old frame(s).
 
   1. Within the main camera, drag in your parallax object (I will be using clouds) 
-
   2. Clone/ copy and paste another version of the parallax object and set it just right and left of the original object if you want it to go right to left. Note the theses should be a child of the original object
-
   3. Create new parallax script and put this in it:
-
      ```c#
      using System.Collections;
      using System.Collections.Generic;
@@ -861,9 +792,7 @@ What parallax does is like a old film reel, but instead of new frames, it is a r
          }
      }
      ```
-
   4. Drag the script on the original parallax object
-
   5. Drag the main camera in the camera slot and play with the parallax number (between 1 to 0) to see how much parallax you want
 
 Resource: https://www.youtube.com/watch?v=zit45k6CUMk
@@ -883,7 +812,6 @@ For changing controls, go to Project Settings -> Input Manager and you can chang
 Linking scenes is quite easy and just requires knowledge of the following:
 
   1. When moving to another scene (this will usually involve a detection collider), simply put
-
   ```c#
   using UnityEngine.SceneManagement;
   
@@ -902,13 +830,9 @@ Linking scenes is quite easy and just requires knowledge of the following:
 For this exercise, I will create a death zone if the player is out of bounds, however, this could easily be modified such that they are spikes. 
 
   1. Create an empty object to house the colliders for out of bounds
-
   2. Make the colliders are a series of sprites or a tile map. As long as a collider can be set to it such that Unity can detect when the Player's colliders collide with the out of bounds colliders, it is fine
-
   3. Create a new tag. I will call it **death**
-
   4. Create script **death** and paste in the following
-
      ```c#
      using System.Collections;
      using System.Collections.Generic;
@@ -931,9 +855,7 @@ For this exercise, I will create a death zone if the player is out of bounds, ho
          }
      }
      ```
-
      \* Optionally, you can just add this to the movement player script
-
   5. Drag to player collider
 
 
@@ -945,9 +867,7 @@ For this exercise, I will create a death zone if the player is out of bounds, ho
 Enemies are an important yet complicated thing. They can be static, or mobile. Have easy or tough AI, or creates projectiles. For this example I will do medium-easy example of a creature in a box moving back and forth
 
   1. Drag Sprite or Animation in the scene
-
   2. New creatureMove script and paste in the following
-
      ```c#
      using System.Collections;
      using System.Collections.Generic;
@@ -986,21 +906,13 @@ Enemies are an important yet complicated thing. They can be static, or mobile. H
          }
      }
      ```
-
   3. Drag script to creature
-
   4. Create an empty object as a child of the creature
-
   5. To see the empty object that will act as a wall detector, press the cube icon and click on a large tag
-
      ![detector](images/detector.png)
-
   6. Place empty object in front of the creature such that if that empty interacts a wall, the creature will turn
-
   7. Drag the creature itself into the creature box and the empty in the wall box
-
   8. Change speed to desired amount and check **Smart Turn** to make the creature turn instead of falling off an ledge
-
   9. If you want the creature to not walk off the edge, also cone the empty object and put it bellow the feet of the player so it is always touching the ground. Once it is not touching the ground, it should turn around
 
 
@@ -1012,9 +924,7 @@ Enemies are an important yet complicated thing. They can be static, or mobile. H
 Pausing with Unity can be made simple with one command. 
 
   1. Create script pause and drag it on your player (optionally, you can just do this in the movement folder, but this will be more organized)
-
   2. Create a pause UI element (I will be doing a simple Pause text)
-
   3. Paste in the following:
 
      ```c#
@@ -1048,7 +958,6 @@ Pausing with Unity can be made simple with one command.
          }
      }
      ```
-
   4. Place the UI element in the Pause menu box
 
 Resource: https://www.youtube.com/watch?v=JivuXdrIHK0
@@ -1154,17 +1063,11 @@ When using this, after running the game, it will output to Unity's debug console
 So you are finished your game. You need to disturbed the game. This is done through building the game. 
 
   1. Go to **File**, **Build Settings...**
-
   2. Select the scenes that you want to build
-
      ![build](images/build.png)
-
   3. Select the desired **Platform**
-
   4. You can customize the company name, product name, icon, and cursor
-
   5. **Build** (**And Run** if you want to run it)
-
   6. Select the folder and wait for it to build
 
 \* Note if you did not add an exit game button, the only way to exit is to close the program externally or Alt-f4
@@ -1178,17 +1081,11 @@ So you are finished your game. You need to disturbed the game. This is done thro
 To download the finished project:
 
   1. Go to https://github.com/Zeyu-Li/Unity-Tutorial-2D
-
   2. Download ZIP after clicking Clone or download
-
      ![download](images/download.png)
-
   3. Unzip and move to desired directory
-
   4. Go on Unity Hub and click **Add** and located to directory
-
   5. The project should appear in Projects and it is done
-
   6. Click on the project to open it
 
   \* Note if you want the project at different steps click on commits or https://github.com/Zeyu-Li/Unity-Tutorial-2D/commits/master and between Feb 26, 2020 `added logo` commit to April 12, 2020 `finished Unity template game` is when various steps where completed. To download the project file at these times, click on the bracket thing (see below) and repeat above from step 2
