@@ -1,12 +1,8 @@
-# Unity User Guide
+# 2D Unity User Guide
 
 ## About
 
-This is a [Unity](https://unity.com/) User guide
-
-I will start at the beginning and work my way through the variations avenues you could have about your game. I will go through 2D and 3D games along with general tips and tricks for solo and team-based projects. Without future ado, let's begin! 
-
-
+This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer. I will go through 2D games design along with general tips and tricks for solo and team-based projects. Without further ado, let's begin! 
 
 <a name="top"></a>
 
@@ -20,7 +16,8 @@ I will start at the beginning and work my way through the variations avenues you
    * [Sprites](#spr)
    * [Movement](#move)
    * [Camera](#camera)
-     * Background
+     * [Background](#background)
+     * [Camera Follow](#camera_follow)
    * [Prefabs](#pref)
    * [Particle System](#partsys)
    * [Collectibles](#coll)
@@ -53,7 +50,7 @@ Follow the link [here](https://store.unity.com/download) and download the free i
 
 If you want a new version of Unity, go to the Unity Hub and click the **Installs** tab on the left and **add** (top right) the desired version. Afterwards, the installation will take quite a while, even with a fast internet connection. 
 
-When installing Unity, it might ask you to install **Visual Studio** along-side Unity. If you have Visual Studio, do not install again, it should automatically detect the current VS on the system. Otherwise, it is optional and I've heard that MonoDevelop (comes with Unity) is good enough for handling the task Unity puts forth. 
+When installing Unity, it might ask you to install **Visual Studio** along-side Unity. If you have Visual Studio, do not install again, it should automatically detect the current VS on the system. Otherwise, it is optional and I've heard that MonoDevelop (comes with Unity) is good enough for handling the tasks Unity puts forth. 
 
 
 
@@ -123,7 +120,7 @@ From the header we also see:
 * Sprite mode - as single texture or sprite sheet
   * Adjust the pixels per unit (Pixels per unit should be 1-1) (In my case, it is 358 px per tile)
   * Pivot - where the center of object is
-* Wrap Mode - how the image is displayed (ie repeated or clamped(/cut) at the board)  
+* Wrap Mode - how the image is displayed (ie repeated or clamped(/cut) at the board)
 * Filter Mode - Point (equivalent to pixel perfect or nearest neighbour in Photoshop) or Bilinear (natural scaling with edge softening)
 * Format - Format of image (8bit, 16 bit, 32 bit colour with or without alpha)
 
@@ -312,9 +309,13 @@ The camera will capture things on from the scene to project onto the play window
 
 The most important setting for a camera object is the size. Changing the size will change the view for the user. 
 
+<a name="background"></a>
+
 **Background**
 
 A background can be achieved by placed in the camera and setting the **Order in Layer** to some negative number, such that it is behind the foreground objects
+
+<a name="camera_follow"></a>
 
 **Camera Follow**
 
@@ -347,7 +348,7 @@ When implementing a camera, there are two options, however, we will through the 
 
    
 
-   OR
+   **OR**
 
    
 
@@ -549,25 +550,25 @@ I will do a counter for simplicity
       *Note by using this, you must have one collider with the player tag or the collectable might count twice. Optionally, you can make a new empty game object with the player tag than triggers the collection
 
 
-  Resource: https://www.youtube.com/watch?v=DZ-3g31jk90
+Resource: https://www.youtube.com/watch?v=DZ-3g31jk90
 
-  <a name="anim"></a>
+<a name="anim"></a>
 
   #### 4h Animation
 
-  Animation is critical in creating any game that does not look static. In Unity, animation is handled by Animator and Animation windows. The **Animator** is a node based system while the **Animations** is a timeline based.
+Animation is critical in creating any game that does not look static. In Unity, animation is handled by Animator and Animation windows. The **Animator** is a node based system while the **Animations** is a timeline based.
 
   1. To make an animation, simply drag more than 1 picture into the scene
 
   2. Save your animations in the animations folder
 
-  You have made your first animation
+You have made your first animation
 
-  To adjust your animation, go to the animator window and clip on the orange node.
+To adjust your animation, go to the animator window and clip on the orange node.
 
-  You can change the speed here
+You can change the speed here
 
-  To add different actions connected to the original animation; 
+To add different actions connected to the original animation; 
 
   1. Go to the Animations window when the original animation is selected
 
@@ -635,13 +636,13 @@ I will do a counter for simplicity
 
   
 
-  \* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
+\* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
 
-  <a name="events"></a>
+<a name="events"></a>
 
   #### 4i Events
 
-  Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, Let's implement a button that triggers a platform. \* Note tis is very similar to a buttoned door
+Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, Let's implement a button that triggers a platform. \* Note tis is very similar to a buttoned door
 
   1. Have a button and platform object ready. If not, feel free to use the ones below
 
@@ -713,47 +714,47 @@ I will do a counter for simplicity
 
   5. Click on script, drag audio stuff or remove all audio parts from script and set the object to **Some Platform**, also set the timer for when it reverts back to normal (auto is 8 seconds)
 
-  As you can see, using what we already know, we can get a lot of events to work! I know this may be challenging and you may run into bugs (hell, even I ran in many bugs), but persistent and challenge yourself and good luck!
+As you can see, using what we already know, we can get a lot of events to work! I know this may be challenging and you may run into bugs (hell, even I ran in many bugs), but persistent and challenge yourself and good luck!
 
   
 
-  <a name="pix"></a>
+<a name="pix"></a>
 
   #### 4j Pixelated
 
-  Perhaps you want your game to have a pixelized feel, thankfully, it is not too much work to do that with Unity. 
+Perhaps you want your game to have a pixelized feel, thankfully, it is not too much work to do that with Unity. 
 
-  General rules and tips
+**General rules and tips**
 
-  Some extensions (especially with cameras) have options to enable **pixel perfect**. Whenever presented with that option, select it.
+Some extensions (especially with cameras) have options to enable **pixel perfect**. Whenever presented with that option, select it.
 
-  Otherwise when importing your pixel artwork or spritesheet; 
+Otherwise when importing your pixel artwork or spritesheet; 
 
-  \* If you need pixel art to practice this section, take this:
+\* If you need pixel art to practice this section, take this:
 
-  <img src="images/heartPerson.png" alt="heartPerson" style="zoom:100%;" />
+<img src="images/heartPerson.png" alt="heartPerson" style="zoom:100%;" />
 
-  Click on Filter Mode -> Point (no filter)
+Click on Filter Mode -> Point (no filter)
 
-  ![pixel](images/pixel.png)
+![pixel](images/pixel.png)
 
-  The point mode is like a nearest neighbour in Photoshop. This way, if you scale it, you will get the pixels to snap sharply. 
+The point mode is like a nearest neighbour in Photoshop. This way, if you scale it, you will get the pixels to snap sharply. 
 
-  You may also change the pixels per unit to your desired size. 
+You may also change the pixels per unit to your desired size. 
 
-  <a name="music"></a>
+<a name="music"></a>
 
   #### 4k Music & Sounds
 
-  Music is curial to a game's level of emersion. While I will not go into music theory and music in general, I will help you get familiar with how Unity handles sounds. This is something Unity does really well, so not much can be said in the chapter. 
+Music is curial to a game's level of emersion. While I will not go into music theory and music in general, I will help you get familiar with how Unity handles sounds. This is something Unity does really well, so not much can be said in the chapter. 
 
-  If you need music to practice with, use main.wav in the **test_music** directory. Also note that this music is made by me and I give you permission to use it under creative commons license 
+If you need music to practice with, use main.wav in the **test_music** directory. Also note that this music is made by me and I give you permission to use it under creative commons license 
 
-  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 
-  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-  First, when dealing with sound, not much should be changed and when playing a sound, in the script that triggers the sound, just put the following in
+First, when dealing with sound, not much should be changed and when playing a sound, in the script that triggers the sound, just put the following in
 
   ```c#
   // audio    
@@ -765,21 +766,21 @@ I will do a counter for simplicity
   audioSource.PlayOneShot(clip, volume);
   ```
 
-  The 3 options are
+The 3 options are
 
   1. AudioSource - where the sound is omitted from
   2. AudioClip - the audio file
   3. volume - the volume of the clip
 
-  For music, it is recommended that a **Audio Source** object is created and a script added to control the music and when to stop it
+For music, it is recommended that a **Audio Source** object is created and a script added to control the music and when to stop it
 
-  Otherwise, if starting and stopping the music is not a concern, just drag the music clip into the Audio Clip box and you are done
+Otherwise, if starting and stopping the music is not a concern, just drag the music clip into the Audio Clip box and you are done
 
-  ![music](images/music.png)
+![music](images/music.png)
 
-  ![music2](images/music2.png)
+![music2](images/music2.png)
 
-  Below are some more options. Some important ones are the 
+Below are some more options. Some important ones are the 
 
   1. Play on Awake - plays when scene is loaded 
   2. loop - loops track
@@ -790,9 +791,9 @@ I will do a counter for simplicity
 
   #### 4l Parallax
 
-  Parallax is a popular way of displaying movement, especially if the game is a bit static.
+Parallax is a popular way of displaying movement, especially if the game is a bit static.
 
-  What parallax does is like a old film reel, but instead of new frames, it is a repeat of the old frame(s).
+What parallax does is like a old film reel, but instead of new frames, it is a repeat of the old frame(s).
 
   1. Within the main camera, drag in your parallax object (I will be using clouds) 
 
@@ -845,17 +846,17 @@ I will do a counter for simplicity
 
   
 
-  Resource: https://www.youtube.com/watch?v=zit45k6CUMk
+Resource: https://www.youtube.com/watch?v=zit45k6CUMk
 
-  <a name="odds"></a>
+<a name="odds"></a>
 
   #### 4m Odds and Ends
 
-  For changing controls, go to Project Settings -> Input Manager and you can change your input from there
+For changing controls, go to Project Settings -> Input Manager and you can change your input from there
 
-  **Linking Scenes**
+**Linking Scenes**
 
-  Linking scenes is quite easy and just requires knowledge of the following
+Linking scenes is quite easy and just requires knowledge of the following
 
   1. When moving to another scene (this will usually involve a detection collider), simply put
 
@@ -870,9 +871,9 @@ I will do a counter for simplicity
 
   
 
-  **Death Zones**
+**Death Zones**
 
-  For this exercise, I will create a death zone if the player is out of bounds, however, this could easily be modified such that they are spikes. 
+For this exercise, I will create a death zone if the player is out of bounds, however, this could easily be modified such that they are spikes. 
 
   1. Create an empty object to house the colliders for out of bounds
 
@@ -911,9 +912,9 @@ I will do a counter for simplicity
 
      
 
-  **Enemies**
+**Enemies**
 
-  Enemies are an important yet complicated thing. They can be static, or mobile. Have easy or tough AI, or creates projectiles. For this example I will do medium-easy example of a creature in a box moving back and forth
+Enemies are an important yet complicated thing. They can be static, or mobile. Have easy or tough AI, or creates projectiles. For this example I will do medium-easy example of a creature in a box moving back and forth
 
   1. Drag Sprite or Animation in the scene
 
@@ -974,11 +975,11 @@ I will do a counter for simplicity
 
   9. If you want the creature to not walk off the edge, also cone the empty object and put it bellow the feet of the player so it is always touching the ground. Once it is not touching the ground, it should turn around
 
-  
 
-  **Pausing**
 
-  Pausing with Unity can be made simple with one command. 
+**Pausing**
+
+Pausing with Unity can be made simple with one command. 
 
   1. Create script pause and drag it on your player (optionally, you can just do this in the movement folder, but this will be more organized)
 
@@ -1022,11 +1023,11 @@ I will do a counter for simplicity
 
   
 
-  Resource: https://www.youtube.com/watch?v=JivuXdrIHK0
+Resource: https://www.youtube.com/watch?v=JivuXdrIHK0
 
-  **Quit**
+**Quit**
 
-  To quit game simply add the following onto the player:
+To quit game simply add the following onto the player:
 
   ```c#
   if (Input.GetKey("escape")) // change escape to any other character if you like 
@@ -1035,9 +1036,9 @@ I will do a counter for simplicity
   }
   ```
 
-  in the update method
+in the update method
 
-  \* Note, of course more logic could be added to make this more complicated
+\* Note, of course more logic could be added to make this more complicated
 
   
 
@@ -1045,7 +1046,7 @@ I will do a counter for simplicity
 
   #### 4n End Note
 
-  I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3/issues) and open a new issue. Again, thanks for viewing and good luck to your future Unity endeavors. 
+I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3/issues) and open a new issue. Again, thanks for viewing and good luck to your future Unity endeavors. 
 
 
 
@@ -1057,15 +1058,15 @@ I will do a counter for simplicity
 
 
 
-  [🔝 Back to Top](#top)
+[🔝 Back to Top](#top)
 
-  
+
 
   ### 5. Title Screen
 
-  One of the last things to do is to create a title screen 
+One of the last things to do is to create a title screen 
 
-  See [here](https://github.com/Zeyu-Li/unity-user-guide#title) for title screen section
+See [here](https://github.com/Zeyu-Li/unity-user-guide#title) for title screen section
 
   
 
@@ -1073,11 +1074,11 @@ I will do a counter for simplicity
 
   ### 6. Scripting
 
-  Unity is based on C# and is very much a c-styled programming language. That means it resembles programs that are written in C, C++, F#, or Java. 
+Unity is based on C# and is very much a c-styled programming language. That means it resembles programs that are written in C, C++, F#, or Java. 
 
-  The main thing to know though is Unity's implementation of C#
+The main thing to know though is Unity's implementation of C#
 
-  If you create a script, automatically, it will be drawn from a template that looks similar to the following:
+If you create a script, automatically, it will be drawn from a template that looks similar to the following:
 
   ```c#
   using System.Collections;
@@ -1100,25 +1101,25 @@ I will do a counter for simplicity
   }
   ```
 
-  You will notice that at the top there are imports from Unity's other libraries using the **using** keyword. Afterwards, Unity defines the script as a class*. The class is defined as public so other scripts and Unity can assess and utilize this class. The name you gave the script will follow the **class** keyword. Afterwards, **MonoBehaviour** is defined as what movement inherits from. Think of this as your script **extending** from class MonoBehaviour. 
+You will notice that at the top there are imports from Unity's other libraries using the **using** keyword. Afterwards, Unity defines the script as a class*. The class is defined as public so other scripts and Unity can assess and utilize this class. The name you gave the script will follow the **class** keyword. Afterwards, **MonoBehaviour** is defined as what movement inherits from. Think of this as your script **extending** from class MonoBehaviour. 
 
   
 
-  Below that and indented, we see void Start() and void Update(). As the comments suggest, void Start() occurs before the first frame update and void Update() is called once per frame. Note **void** means there will not be a return value (ie no return statement).
+Below that and indented, we see void Start() and void Update(). As the comments suggest, void Start() occurs before the first frame update and void Update() is called once per frame. Note **void** means there will not be a return value (ie no return statement).
 
-  Also, there are different methods of MonoBehaviour such as **FixedUpdate()** that may update more or less than once per frame. This will be important for any physics related functions
+Also, there are different methods of MonoBehaviour such as **FixedUpdate()** that may update more or less than once per frame. This will be important for any physics related functions
 
   
 
-  \* A class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
+\* A class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
 
-  A list of other functions and methods that can be used can be found on the [Unity Documentation](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) site, however, the most important thing about learning and debugging Unity is to use
+A list of other functions and methods that can be used can be found on the [Unity Documentation](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) site, however, the most important thing about learning and debugging Unity is to use
 
   ```c#
   Debug.Log() // logs to Unity console
   ```
 
-  When using this, after running the game, it will output to Unity's debug console
+When using this, after running the game, it will output to Unity's debug console
 
   
 
@@ -1126,7 +1127,7 @@ I will do a counter for simplicity
 
   ### 7. Build
 
-  So you are finished your game. You need to disturbed the game. This is done through building the game. 
+So you are finished your game. You need to disturbed the game. This is done through building the game. 
 
   1. Go to **File**, **Build Settings...**
 
@@ -1144,15 +1145,15 @@ I will do a counter for simplicity
 
   
 
-  \* Note if you did not add an exit game button, the only way to exit is to close the program externally or Alt-f4
+\* Note if you did not add an exit game button, the only way to exit is to close the program externally or Alt-f4
 
   
 
-  <a name="guide"></a>
+<a name="guide"></a>
 
   ### 8. Cloning Guide
 
-  From my [GitHub](https://github.com/Zeyu-Li?tab=repositories):
+From my [GitHub](https://github.com/Zeyu-Li?tab=repositories):
 
   1. Find the right Unity Repo to clone from my account (ie [Unity-Template-2D-2019_3](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3), [Unity-Template-3D-2019](https://github.com/Zeyu-Li/Unity-Template-2D-2019_3)) 
 
@@ -1170,29 +1171,29 @@ I will do a counter for simplicity
 
   
 
-  <a name="team"></a>
+<a name="team"></a>
 
   ### 9. Collaboration
 
-  <a name="unity"></a>
+<a name="unity"></a>
 
   #### Unity's Collab
 
-  Collaborating will friends can be tough will Unity, especially with git/GitHub, but it you are careful, things could turn out fine.
+Collaborating will friends can be tough will Unity, especially with git/GitHub, but it you are careful, things could turn out fine.
 
-  If you need to collaborate, the best way is to use Unity's Collab feature
+If you need to collaborate, the best way is to use Unity's Collab feature
 
   ![collab](images/collab.png)
 
-  However, note that this only supports 4 people (which is usually enough because only people that will contribute to the codebase should need it)
+However, note that this only supports 4 people (which is usually enough because only people that will contribute to the codebase should need it)
 
   
 
-  <a name='git'></a>
+<a name='git'></a>
 
   #### GitHub
 
-  Otherwise if you are a masochistic and decide to GitHub, here are some general practices:
+Otherwise if you are a masochistic and decide to GitHub, here are some general practices:
 
   1. Everyone should work on there own branches and work on there own scenes working towards **Prefabs** (ie one person on movement, one on moving platforms, etc.)
   2. Optionally, have one person on the master (final) level to peace it together
@@ -1202,11 +1203,11 @@ I will do a counter for simplicity
   6. Remember you can go back to a previous working version
   7. Have fun and don't fight with your team members
 
-  [🔝 Back to Top](#top)
+[🔝 Back to Top](#top)
 
-  
 
-  <a name="Help"></a>
+
+<a name="Help"></a>
 
   ### 10. Resources
 
@@ -1216,4 +1217,4 @@ I will do a counter for simplicity
   * Google is your best friend
   * Ask on Reddit or Stack Exchange, don't worry they won't bite
 
-  
+
