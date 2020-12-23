@@ -44,8 +44,6 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
     * [GitHub](#git)
 23. [Resources](#help)
 
-
-
 <a name="install"></a>
 
 ### 1. Installation
@@ -1047,9 +1045,9 @@ If you create a script, automatically, it will be drawn from a template that loo
 
 You will notice that at the top there are imports from Unity's other libraries using the **using** keyword. Afterwards, Unity defines the script as a class*. The class is defined as public so other scripts and Unity can assess and utilize this class. The name you gave the script will follow the **class** keyword. Afterwards, **MonoBehaviour** is defined as what movement inherits from. Think of this as your script **extending** from class MonoBehaviour. 
 
-\* Note a class is a data structure that holds a collection of information on the class (ie, its attributes and methods). 
+\* Note a class is a data structure that holds a collection of information on the class (ie. its attributes and methods). 
 
-Below that and indented, we see void Start() and void Update(). As the comments suggest, void Start() occurs before the first frame update and void Update() is called once per frame. Note **void** means there will not be a return value (ie no return statement).
+Below that and indented, we see void Start() and void Update(). As the comments suggest, void Start() occurs before the first frame update and void Update() is called once per frame. Note **void** means there will not be a return value (ie. no return statement).
 
 Also, there are different methods of MonoBehaviour such as **FixedUpdate()** that may update more or less than once per frame. This will be important for any physics related functions
 
