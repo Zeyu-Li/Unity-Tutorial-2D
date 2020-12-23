@@ -96,7 +96,7 @@ Other panels include a console, which will output when the game is run. The **An
 
 <a name="2dg"></a>
 
-### 	4 General
+### 	4. General
 
 So you've decide to make a 2D game. Great! Who needs modelling and lighting anyways? 
 
@@ -108,7 +108,7 @@ So you've decide to make a 2D game. Great! Who needs modelling and lighting anyw
 
 <a name="spr"></a>
 
-### 	5 Sprites
+### 	5. Sprites
 
 Sprites are what make up the visuals of the game. These could be png or jpeg (recommended because of small size) file. You can make your own and drag them into an **Artworks folder**.
 
@@ -180,7 +180,7 @@ Resources: [Brackeys](https://www.youtube.com/watch?v=ryISV_nH8qw)
 
 <a name="move"></a>
 
-### 	6 Movement
+### 	6. Movement
 
 Movement is critical in all games, whether the movement is limited to left or right, or games that in 3D. On the internet there are may sources that claim the perfect jump, but only you can decide that based on what type of gameplay you want. 
 
@@ -300,7 +300,7 @@ Resource: https://www.youtube.com/watch?v=j111eKN8sJw
 
 <a name="camera"></a>
 
-### 	7 Camera
+### 	7. Camera
 
 The camera will capture things on from the scene to project onto the play window. 
 
@@ -308,13 +308,13 @@ The most important setting for a camera object is the size. Changing the size wi
 
 <a name="background"></a>
 
-**Background**
+#### Background
 
 A background can be achieved by placed in the camera and setting the **Order in Layer** to some negative number, such that it is behind the foreground objects
 
 <a name="camera_follow"></a>
 
-**Camera Follow**
+#### Camera Follow
 
 When implementing a camera, there are two options, however, we will through the harder option first to get use to how cameras work
 
@@ -375,7 +375,7 @@ Resource: https://www.youtube.com/watch?v=MFQhpwc6cKE or https://www.youtube.com
 
 <a name="pref"></a>
 
-### 	8 Prefab
+### 	8. Prefab
 
 A prefab is simply a clone that can be dragged to the scene
 
@@ -387,7 +387,7 @@ To make a prefab, just drag the desired prefab object from scene to the prefabs 
 
 <a name="partsys"></a>
 
-### 	9 Particle System
+### 	9. Particle System
 
 A particle system adds an extra layer of immersion that is quite simple in Unity. 
 
@@ -434,7 +434,7 @@ If there is some setting I haven't mentioned but look interesting, refer to the 
 
 <a name="coll"></a>
 
-### 10 Collectibles
+### 10. Collectibles
 
 There are two parts to a collectible: 
 
@@ -454,7 +454,7 @@ We will start with 1. the collection of an item
    ![tag](images/tag.png)
 5. Within the player movement, we need to detect the collision overlaps and if an element of the tag overlaps the player, destroy object
 
-   The is done by putting the following code somewhere in the player movement class (not in an update or start method)
+   This is done by putting the following code somewhere in the player movement class (not in an update or start method)
 
    ```c#
    private void OnTriggerEnter2D(Collider2D collision) {
@@ -535,14 +535,14 @@ Resource: https://www.youtube.com/watch?v=DZ-3g31jk90
 
 <a name="anim"></a>
 
-  ### 11 Animation
+  ### 11. Animation
 
 Animation is critical in creating any game that does not look static. In Unity, animation is handled by Animator and Animation windows. The **Animator** is a node based system while the **Animations** is a timeline based.
 
 To make an animation, simply:
 
-    1. Drag more than 1 picture into the scene
-    2. Save your animations in the animations folder
+1. Drag more than 1 picture into the scene
+2. Save your animations in the animations folder
 
 You have made your first animation
 
@@ -603,7 +603,7 @@ To add different actions connected to the original animation:
 
 <a name="events"></a>
 
-  ### 12 Events
+  ### 12. Events
 
 Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, let's implement a button that triggers a platform. 
 
@@ -674,7 +674,7 @@ As you can see, using what we already know, we can get a lot of events to work! 
 
 <a name="pix"></a>
 
-  ### 13 Pixelated
+  ### 13. Pixelated
 
 Perhaps you want your game to have a pixelized feel, thankfully, it is not too much work to do that with Unity. 
 
@@ -700,7 +700,7 @@ You may also change the pixels per unit to your desired size.
 
 <a name="music"></a>
 
-  ### 14 Music & Sounds
+  ### 14. Music & Sounds
 
 Music is curial to a game's level of emersion. While I will not go into music theory and music in general, I will help you get familiar with how Unity handles sounds. This is something Unity does really well, so not much can be said in the chapter. 
 
@@ -747,7 +747,7 @@ Below are some more options. Some important ones are the
 
 <a name="par"></a>
 
-  ### 15 Parallax
+  ### 15. Parallax
 
 Parallax is a popular way of displaying movement, especially if the game is a bit static.
 
@@ -803,7 +803,7 @@ Resource: https://www.youtube.com/watch?v=zit45k6CUMk
 
 <a name="odds"></a>
 
-  ### 16 Odds and Ends
+  ### 16. Odds and Ends
 
 For changing controls, go to Project Settings -> Input Manager and you can change your input from there
 
@@ -988,13 +988,13 @@ in the update method
 
   <a name="end2d"></a>
 
-  ### 17 End Note
+  ### 17. End Note
 
 I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Tutorial-2D/discussions) and open a discussion. Again, thanks for viewing and good luck to your future Unity endeavors. 
 
 <a name="finished"></a>
 
-**End Product/Demo**
+#### End Product/Demo
 
 ![game](_RawFileAssets/game.gif)
 
@@ -1004,17 +1004,17 @@ I hope you had a good taste of Unity 2D. Of course, this was just a very brief i
 
 <a name="2_title"></a>
 
-  ### 18 Title Screen
+  ### 18. Title Screen
 
 One of the last things to do is to create a title screen 
 
-See [here](https://github.com/Zeyu-Li/unity-user-guide#title) for title screen section
+See [here](https://github.com/Zeyu-Li/unity-user-guide#3_title) for title screen section
 
   
 
 <a name="script"></a>
 
-  ### 19 Scripting
+  ### 19. Scripting
 
 Unity is based on C# and is very much a c-styled programming language. That means it resembles programs that are written in C, C++, or Java. 
 
@@ -1063,7 +1063,7 @@ When using this, after running the game, it will output to Unity's debug console
 
   <a name="build"></a>
 
-  ### 20 Build
+  ### 20. Build
 
 So you are finished your game. You need to disturbed the game. This is done through building the game. 
 
@@ -1082,7 +1082,7 @@ So you are finished your game. You need to disturbed the game. This is done thro
 
 <a name="guide"></a>
 
-  ### 21 Cloning Guide
+  ### 21. Cloning Guide
 
 To download the finished project:
 
@@ -1103,7 +1103,7 @@ To download the finished project:
 
 <a name="team"></a>
 
-  ### 22 Collaboration
+  ### 22. Collaboration
 
 <a name="unity_collab"></a>
 
@@ -1139,7 +1139,7 @@ Otherwise if you decide to GitHub, here are some general practices:
 
 <a name="Help"></a>
 
-  ### 23 Resources
+  ### 23. Resources
 
   * The [Unity User Manual](https://docs.unity3d.com/Manual/index.html) provides some great documentation with code that can for the most part be copied and pasted
   * Brackey's [YouTube channel](https://www.youtube.com/user/Brackeys)
