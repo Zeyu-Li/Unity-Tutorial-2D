@@ -35,7 +35,7 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
     * [Quiting](#quit)
 17. [End Note](#end2d)
     * [Demo](#finished)
-18. [Title Screen](#title)
+18. [Title Screen](#2_title)
 19. [Scripting](#script)
 20. [Building](#build)
 21. [Cloning Guide](#guide)
@@ -1000,9 +1000,11 @@ I hope you had a good taste of Unity 2D. Of course, this was just a very brief i
 
 ![game](_RawFileAssets/game.gif)
 
-
-
 [🔝 Back to Top](#top)
+
+
+
+<a name="2_title"></a>
 
   ### 18 Title Screen
 
