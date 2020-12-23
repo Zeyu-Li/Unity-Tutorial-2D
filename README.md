@@ -452,6 +452,7 @@ We will start with 1. the collection of an item
 2. Drag gem into level
 3. Add collider (I think box collider works best here) and check **Is Trigger**
 4. Add a new tag and select it of the gem
+
    ![tag](images/tag.png)
 5. Within the player movement, we need to detect the collision overlaps and if an element of the tag overlaps the player, destroy object
 
@@ -609,6 +610,7 @@ To add different actions connected to the original animation:
 Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, let's implement a button that triggers a platform. 
 
   1. Have a button and platform object ready. If not, feel free to use the ones below
+
      <img src="images/button.png" alt="button" style="zoom:50%;" /><img src="images/pressedButton.png" alt="pressedButton" style="zoom:50%;" /><img src="images/platform.png" alt="platform" style="zoom:70%;" />
   2. If you want, drag the two buttons as an animation so you can change the sprites when touched, but I will not go through the animations
   3. Add a button tag onto the button
@@ -911,6 +913,7 @@ Enemies are an important yet complicated thing. They can be static, or mobile. H
   3. Drag script to creature
   4. Create an empty object as a child of the creature
   5. To see the empty object that will act as a wall detector, press the cube icon and click on a large tag
+
      ![detector](images/detector.png)
   6. Place empty object in front of the creature such that if that empty interacts a wall, the creature will turn
   7. Drag the creature itself into the creature box and the empty in the wall box
@@ -1066,6 +1069,7 @@ So you are finished your game. You need to disturbed the game. This is done thro
 
   1. Go to **File**, **Build Settings...**
   2. Select the scenes that you want to build
+
      ![build](images/build.png)
   3. Select the desired **Platform**
   4. You can customize the company name, product name, icon, and cursor
@@ -1084,6 +1088,7 @@ To download the finished project:
 
   1. Go to https://github.com/Zeyu-Li/Unity-Tutorial-2D
   2. Download ZIP after clicking Clone or download
+
      ![download](images/download.png)
   3. Unzip and move to desired directory
   4. Go on Unity Hub and click **Add** and located to directory
