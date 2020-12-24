@@ -990,13 +990,20 @@ in the update method
 
   ### 17. End Note
 
-I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Tutorial-2D/discussions) and open a discussion. Again, thanks for viewing and good luck to your future Unity endeavors. 
+I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie. UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Tutorial-2D/discussions) and open a discussion. Again, thanks for viewing and good luck to your future Unity endeavors. 
 
 <a name="finished"></a>
 
 #### End Product/Demo
 
 ![game](_RawFileAssets/game.gif)
+
+If you want to play it yourself (On windows, sorry Unix users 😜 need to build from source yourself):
+
+1. Go to the the releases on the GitHub or https://github.com/Zeyu-Li/Unity-Tutorial-2D/releases/tag/1.0 
+2. Download the template_build.zip
+3. Unzip
+4. Run the executable!
 
 [🔝 Back to Top](#top)
 
