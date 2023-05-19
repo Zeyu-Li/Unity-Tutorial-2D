@@ -2,7 +2,7 @@
 
 ## About
 
-This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer. I will go through 2D games design along with general tips and tricks for solo and team-based projects. Without further ado, let's begin! 
+This is a 2D Unity user guide that acts as a tutorial in making a 2D platformer. I will go through 2D games design along with general tips and tricks for solo and team-based projects. Without further ado, let's begin! 
 
 <a name="top"></a>
 
@@ -50,7 +50,7 @@ This it a 2D Unity user guide that acts as a tutorial in making a 2D platformer.
 
 Before installing, note that Unity is **completely free**, if you or your company makes less than $100 000 (USD). 
 
-Follow the link [here](https://store.unity.com/download) and download the free installer (the plus version is definitely not necessary). Follow the instructions and download the installer. The Unity installer is simple and easy to use nevertheless, this [video](https://www.youtube.com/watch?v=KMuMhA6Lk0I) for Windows is a tutorial in installing it. Also note that you will may need a Unity account or just use your Google/Facebook account to sign in. 
+Follow the link [here](https://store.unity.com/download) and download the free installer (the plus version is definitely not necessary). Follow the instructions and download the installer. The Unity installer is simple and easy to use nevertheless, this [video](https://www.youtube.com/watch?v=KMuMhA6Lk0I) for Windows is a tutorial in installing it. Also note that you may need a Unity account or just use your Google/Facebook account to sign in. 
 
 If you want a new version of Unity, go to the Unity Hub and click the **Installs** tab on the left and **ADD** (top right) the desired version (it is recommended that you pick a version with **long term support** or LTS); however do be warned that this tutorial was made in **2019.3** so in newer versions, things might have moved places or removed entirely 😞. Afterwards, the installation will take quite a while, even with a fast internet connection. 
 
@@ -62,7 +62,7 @@ When installing Unity, it might ask you to install **Visual Studio** along-side 
 
 ### 2. General
 
-**Unity** is a 3D game engine built in **C#** but can be used for 2D. Before you freak out about programming, let me assure, you it is quite trivial. If you have programmed before especially in C++, it is a huge plus. If you have not, don't worry, it's just a bunch of copy and pasting. The most important thing is don't be frustrated and 
+**Unity** is a 3D game engine built in **C#** but can be used for 2D. Before you freak out about programming, let me assure you, it is quite trivial. If you have programmed before, especially in C++, it is a huge plus. If you have not, don't worry, it's just a bunch of copy and pasting. The most important thing is don't be frustrated and 
 
 ```c#
 Debug.Log() // logs to Unity console
@@ -70,7 +70,7 @@ Debug.Log() // logs to Unity console
 
 is your friend. 
 
-Being organized in Unity is a must, especially for big projects. Have organized folder will help a ton, in addition, using empties as folders within scene is *+1 organization*. 
+Being organized in Unity is a must, especially for big projects. Have organized folder will help a ton, in addition, using empties as folders within the scene is *+1 organization*. 
 
 
 
@@ -84,7 +84,7 @@ Unity is a panel based application. These panels can be rearranged however you l
 
 This is my default setup. The **Scene** panel is the most important viewport. This is where you modify the scene. The **Game** scene only turns on if you hit play. It is a preview of what the user will see if you build the current scene.
 
-On the right hand side, we have the **Project** directory (folder) panel on the bottom. This is where all your assets are (ie art, music, scripts). The **Hierarchy** is like a layers panel in Photoshop. It is an arrangement of all elements in the scene. For every element of the scene can be hidden from the view by hitting eye button when hovering on the element. The lock button is the pointer icon. The **Inspector** contains all modifiable aspect of an element along with info. This is where you drag scripts in the element.
+On the right hand side, we have the **Project** directory (folder) panel on the bottom. This is where all your assets are (ie art, music, scripts). The **Hierarchy** is like a layers panel in Photoshop. It is an arrangement of all elements in the scene. For every element of the scene can be hidden from the view by hitting the eye button when hovering on the element. The lock button is the pointer icon. The **Inspector** contains all modifiable aspects of an element along with info. This is where you drag scripts in the element.
 
 Other panels include a console, which will output when the game is run. The **Animator** and **Animation** go hand in hand and creates animation for sprites. 
 
@@ -98,9 +98,9 @@ Other panels include a console, which will output when the game is run. The **An
 
 ### 	4. General
 
-So you've decide to make a 2D game. Great! Who needs modelling and lighting anyways? 
+So you've decided to make a 2D game. Great! Who needs modelling and lighting anyways? 
 
-2D games are secretly 3D, what does that mean? Think of Unity 2D as a bunch of layers like in Photoshop, Gimp, After Effects, or Illustrator. The closest to the camera is picked up first and blocks the ones behind it. As a 2D world, lighting is global (unless you want enable an experimental local lighting feature). To start a new 2D game, click **New** and select 2D on the pop-up screen and use the desired directory (or follow my cloning [guide](#guide) so to not start from starch). This may take some time, but after Unity finishes installing itself, we can get started. Now let's make a player and make it move!
+2D games are secretly 3D, what does that mean? Think of Unity 2D as a bunch of layers like in Photoshop, Gimp, After Effects, or Illustrator. The closest to the camera is picked up first and blocks the ones behind it. As a 2D world, lighting is global (unless you want to enable an experimental local lighting feature). To start a new 2D game, click **New** and select 2D on the pop-up screen and use the desired directory (or follow my cloning [guide](#guide) so to not start from starch). This may take some time, but after Unity finishes installing itself, we can get started. Now let's make a player and make it move!
 
 *Note, part of the tutorial (2D) follows this repo: [Unity-Tutorial-2D](https://github.com/Zeyu-Li/Unity-Tutorial-2D)
 
@@ -157,7 +157,7 @@ Now with the tile palette, you can draw on the scene, reorganize everything and 
 
 From the top, there are many icons, we will go through each of them,
 
-* Curser - selects tiles from scene
+* Cursor - selects tiles from scene
 * Move - Moves tiles in palette (Only if you click **Edit**)
 * Brush - paints on scene
 * Square/Rect - Selects multiple tiles or one to paint from
@@ -182,7 +182,7 @@ Resources: [Brackeys](https://www.youtube.com/watch?v=ryISV_nH8qw)
 
 ### 	6. Movement
 
-Movement is critical in all games, whether the movement is limited to left or right, or games that in 3D. On the internet there are may sources that claim the perfect jump, but only you can decide that based on what type of gameplay you want. 
+Movement is critical in all games, whether the movement is limited to left or right, or games that are in 3D. On the internet there are many sources that claim the perfect jump, but only you can decide that based on what type of gameplay you want. 
 
 To start off with, set your player to be a rigid body with colliders:
 
@@ -205,7 +205,7 @@ In the movement class, put
 
 ```c#
 // inits
-// hoziontal speed
+// horizontal speed
 public float speed = 10f;
 
 // vertical jump
@@ -302,7 +302,7 @@ Resource: https://www.youtube.com/watch?v=j111eKN8sJw
 
 ### 	7. Camera
 
-The camera will capture things on from the scene to project onto the play window. 
+The camera will capture things from the scene to project onto the play window. 
 
 The most important setting for a camera object is the size. Changing the size will change the view for the user. 
 
@@ -321,7 +321,7 @@ When implementing a camera, there are two options, however, we will through the 
 1. We will create a camera follow script with the following:
 
    ```c#
-   // selects targe to be fixed on
+   // selects target to be fixed on
    public Transform target;
    public float smoothing = 0.12f;
    
@@ -597,7 +597,7 @@ To add different actions connected to the original animation:
           }
       }
       ```
-\* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
+      \* Note if you don't want the animation to loop, go to the animation in where you saved your animation and uncheck **Loop Time**
 
 
 
@@ -605,7 +605,7 @@ To add different actions connected to the original animation:
 
   ### 12. Events
 
-Events are add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, let's implement a button that triggers a platform. 
+Events add much needed interactions into a game, but keep in mind that every event requires a lot of work. With this in mind, let's implement a button that triggers a platform. 
 
   1. Have a button and platform object ready. If not, feel free to use the ones below
 
@@ -676,7 +676,7 @@ As you can see, using what we already know, we can get a lot of events to work! 
 
   ### 13. Pixelated
 
-Perhaps you want your game to have a pixelized feel, thankfully, it is not too much work to do that with Unity. 
+Perhaps you want your game to have a pixelated feel, thankfully, it is not too much work to do that with Unity. 
 
 **General rules and tips**
 
@@ -702,7 +702,7 @@ You may also change the pixels per unit to your desired size.
 
   ### 14. Music & Sounds
 
-Music is curial to a game's level of emersion. While I will not go into music theory and music in general, I will help you get familiar with how Unity handles sounds. This is something Unity does really well, so not much can be said in the chapter. 
+Music is crucial to a game's level of immersion. While I will not go into music theory and music in general, I will help you get familiar with how Unity handles sounds. This is something Unity does really well, so not much can be said in the chapter. 
 
 If you need music to practice with, use main.wav in the **test_music** directory. Also note that this music is made by me and I give you permission to use it under creative commons license 
 
@@ -751,10 +751,10 @@ Below are some more options. Some important ones are the
 
 Parallax is a popular way of displaying movement, especially if the game is a bit static.
 
-What parallax does is like a old film reel, but instead of new frames, it is a repeat of the old frame(s).
+What parallax does is like an old film reel, but instead of new frames, it is a repeat of the old frame(s).
 
   1. Within the main camera, drag in your parallax object (I will be using clouds) 
-  2. Clone/ copy and paste another version of the parallax object and set it just right and left of the original object if you want it to go right to left. Note the theses should be a child of the original object
+  2. Clone/ copy and paste another version of the parallax object and set it just right and left of the original object if you want it to go right to left. Note the these should be a child of the original object
   3. Create new parallax script and put this in it:
      ```c#
      using System.Collections;
@@ -915,8 +915,8 @@ Enemies are an important yet complicated thing. They can be static, or mobile. H
      ![detector](images/detector.png)
   6. Place empty object in front of the creature such that if that empty interacts a wall, the creature will turn
   7. Drag the creature itself into the creature box and the empty in the wall box
-  8. Change speed to desired amount and check **Smart Turn** to make the creature turn instead of falling off an ledge
-  9. If you want the creature to not walk off the edge, also cone the empty object and put it bellow the feet of the player so it is always touching the ground. Once it is not touching the ground, it should turn around
+  8. Change speed to desired amount and check **Smart Turn** to make the creature turn instead of falling off a ledge
+  9. If you want the creature to not walk off the edge, also come the empty object and put it below the feet of the player so it is always touching the ground. Once it is not touching the ground, it should turn around
 
 
 
@@ -990,7 +990,7 @@ in the update method
 
   ### 17. End Note
 
-I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie. UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resource can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Tutorial-2D/discussions) and open a discussion. Again, thanks for viewing and good luck to your future Unity endeavors. 
+I hope you had a good taste of Unity 2D. Of course, this was just a very brief introduction and there are many more aspects of Unity not covered; ie. UI buttons. You can go to my Unity 3D course below if you want to learn more, or start creating your 2D game. There are many more resources online for you to check out if you need help, or want inspiration. These resources can be found in [section 11](#Help) and thank you for joining me with this course. If you have any feedback, feel free to go to the [GitHub](https://github.com/Zeyu-Li/Unity-Tutorial-2D/discussions) and open a discussion. Again, thanks for viewing and good luck to your future Unity endeavors. 
 
 <a name="finished"></a>
 
@@ -1072,7 +1072,7 @@ When using this, after running the game, it will output to Unity's debug console
 
   ### 20. Build
 
-So you are finished your game. You need to disturbed the game. This is done through building the game. 
+So you finished your game, now you need to disturbed the game. This is done through building the game. 
 
   1. Go to **File**, **Build Settings...**
   2. Select the scenes that you want to build
@@ -1116,7 +1116,7 @@ To download the finished project:
 
   #### Unity's Collab
 
-Collaborating will friends can be tough will Unity, especially with git/GitHub, but it you are careful, things could turn out fine.
+Collaborating with friends can be tough with Unity, especially with git/GitHub, but if you are careful, things could turn out fine.
 
 If you need to collaborate, the best way is to use Unity's Collab feature
 
@@ -1132,7 +1132,7 @@ However, note that this only supports 4 people (which is usually enough because 
 
 Otherwise if you decide to GitHub, here are some general practices:
 
-  1. Everyone should work on there own branches and work on there own scenes working towards **Prefabs** (ie one person on movement, one on moving platforms, etc.)
+  1. Everyone should work on their own branches and work on their own scenes working towards **Prefabs** (ie one person on movement, one on moving platforms, etc.)
   2. Optionally, have one person on the master (final) level to peace it together
   3. Use [this](https://github.com/github/gitignore/blob/master/Unity.gitignore) gitignore or clone from my projects on GitHub
   4. Have the core gameplay done first (especially at a Game Jam)
@@ -1153,5 +1153,4 @@ Otherwise if you decide to GitHub, here are some general practices:
   * [Lynda.com](https://www.lynda.com/) - If you have a library card, there is a high probability that you have access to Lynda with their organization deal
   * Google is your best friend
   * Ask on Reddit or Stack Exchange, don't worry they won't bite
-
 
